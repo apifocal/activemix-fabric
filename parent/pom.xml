@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2015-2021 apifocal LLC - https://www.apifocal.com
+
+    This source code is available under a license agreement available at
+    $HOME/LICENSE
+
+    You should have received a copy of the agreement along with this
+    program; if not, contact apifocal LLC.
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apifocal.byway</groupId>
+        <artifactId>fabric</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.apifocal.byway.fabric</groupId>
+    <artifactId>parent</artifactId>
+
+    <packaging>pom</packaging>
+
+    <name>ByWay Fabric | Parent</name>
+    <description>Consolidates dependency management for all subprojects under project root.</description>
+
+    <properties>
+        <activemq.version>5.16.1</activemq.version>
+        <activemix.version>1.0.0.rc1</activemix.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apifocal.activemix.jaas</groupId>
+                <artifactId>activemix-auth-token</artifactId>
+                <version>${activemix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apifocal.activemix.jaas</groupId>
+                <artifactId>activemix-auth-token-spring</artifactId>
+                <version>${activemix.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
